@@ -1,0 +1,46 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run Account Management System",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/src/accounting/index.js",
+            "cwd": "${workspaceFolder}/src/accounting",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug Account Management System",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/src/accounting/index.js",
+            "cwd": "${workspaceFolder}/src/accounting",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopOnEntry": false
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run Jest Tests",
+            "program": "${workspaceFolder}/src/accounting/node_modules/.bin/jest",
+            "args": [
+                "--runInBand",
+                "--no-cache"
+            ],
+            "cwd": "${workspaceFolder}/src/accounting",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "windows": {
+                "program": "${workspaceFolder}/src/accounting/node_modules/jest/bin/jest"
+            }
+        }
+    ]
+}
